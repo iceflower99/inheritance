@@ -5,7 +5,7 @@ package ctect.model;
  *@ version 0.x Mar 28,2016
  */
 
-public abstract class Books
+public abstract class Books 
 {
    //Three data members
 	private String author;

@@ -5,7 +5,7 @@ package ctect.model;
  *@ version 0.x Mar 28,2016
  */
 
-public abstract class Books 
+public abstract class Books implements FoundOnTheInternet,Comparable
 {
    //Three data members
 	private String author;
@@ -25,6 +25,29 @@ public abstract class Books
 	public int pages()
 	{
 		return pages;
+	}
+	
+	
+	public int compareTo(Object compared)
+	{
+		int comparedValue = Integer.MIN_VALUE;
+		
+		if(compared instanceof FoundOnTheInternet)
+		{
+			if(this.cat()> ((FoundOnTheInternet)compared).cat())
+			{
+				comparedValue=1;
+			}
+			else if(this.cat()<((FoundOnTheInternet)compared).cat())
+			{
+				comparedValue=-1;
+			}
+			else
+			{
+				comparedValue=0;
+			}
+		}
+		return comparedValue;
 	}
 	
 }

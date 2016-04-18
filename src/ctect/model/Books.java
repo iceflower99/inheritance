@@ -11,10 +11,17 @@ public abstract class Books implements FoundOnTheInternet,Comparable
 	private String author;
 	private String title;
 	private int pages;
+	private double price;
+	private int amount;
 	
 	public String author()
 	{
 		return author;
+	}
+	
+	public int amount()
+	{
+		return amount;
 	}
 	
 	public String title()
@@ -27,6 +34,34 @@ public abstract class Books implements FoundOnTheInternet,Comparable
 		return pages;
 	}
 	
+	public double getcost()
+	{
+		return  price;
+	}
+	
+	public void setPrice(double price)
+	{
+		this.price=price;
+	}
+	
+	public void setAuthor(String author)
+	{
+		this.author=author;
+	}
+	
+	public void setPages(int pages)
+	{
+		this.pages=pages;
+	}
+	
+	public void setTitle(String title)
+	{
+		this.title=title;
+	}
+	public void setAmount(int amount)
+	{
+		this.amount=amount;
+	}
 	
 	public int compareTo(Object compared)
 	{

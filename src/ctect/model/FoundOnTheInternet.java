@@ -8,4 +8,5 @@ public interface FoundOnTheInternet
     public String meme();
     public double internetLevels();
     public void clickBait(int hate);
+    public int compareTo(Object compared); 
 }

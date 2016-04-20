@@ -71,6 +71,14 @@ public abstract class Books implements FoundOnTheInternet, Comparable
 
 	}
 	
+	/**
+	 * 
+	 * if the supplied variable comes before the calling variable return 1 if
+	 * the supplied variable is after the calling variable return -1 Else if
+	 * they are the same, return 0.
+	 * 
+	 * @return
+	 */
 	public int compareTo(Object compared)
 	{
 		int comparedValue = Integer.MIN_VALUE;
@@ -90,9 +98,10 @@ public abstract class Books implements FoundOnTheInternet, Comparable
 				comparedValue = 0;
 			}
 		}
+
 		return comparedValue;
 	}
-	
+
 	private int dog()
 	{
 		return 0;

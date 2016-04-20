@@ -1,19 +1,33 @@
 package ctect.controller;
 
 import java.util.ArrayList;
-import ctect.model.FoundOnTheInternet;
+import ctect.model.*;
 
 public class CtecController
 {
-private ArrayList<FoundOnTheInternet> internetThings;
+
+	private int start;
+	
+	private ArrayList<FoundOnTheInternet> interenetThings;
 	public CtecController()
 	{
+		makeInternetList();
+	}
+	
+	public String showInternetLevels()
+	{
+		String internetLevels = "";
+		for(FoundOnTheInternet currentInternet:interenetThings)
+		{
+			interenetLevels.concat
+		}
 		
 	}
 	
 	private void makeInternetList()
 	{
-		internetThings.add(new Fiction());
+		interenetThings.add(new Fiction());
+		interenetThings.add(new NonFiction());
 	}
 	
 	public void start()

@@ -37,12 +37,8 @@ public class BicycleDardDeck extends Cards implements FoundOnTheInternet
 	public String meme()
 	{
 		
-		
-		
 		return cardName;
-		
-		
-		
+
 	}
 
 	
@@ -61,7 +57,9 @@ public class BicycleDardDeck extends Cards implements FoundOnTheInternet
 		
 	}
 	
-	
-	
+	public double internetLevels()
+	{
+	return internetLevels();
+	}
 	
 }

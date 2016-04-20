@@ -14,20 +14,22 @@ public class CtecController
 		makeInternetList();
 	}
 	
-	public String showInternetLevels()
+	public String showSillyLevels()
 	{
 		String internetLevels = "";
 		for(FoundOnTheInternet currentInternet:interenetThings)
 		{
-			interenetLevels.concat
+			internetLevels.concat("This is as "+ currentInternet.toString()+
+					" and has a silliness level of "+ currentInternet.internetLevels());
 		}
-		
+		return internetLevels;
 	}
 	
 	private void makeInternetList()
 	{
 		interenetThings.add(new Fiction());
 		interenetThings.add(new NonFiction());
+		interenetThings.add(new BicycleDardDeck());
 	}
 	
 	public void start()
@@ -37,7 +39,9 @@ public class CtecController
 	
 	public void swap(int firstLocation, int secondLocation)
 	{
-		FoundOnTheInternet temp= cat.get(firstLocation);
+		FoundOnTheInternet temp= interenetThings.get(firstLocation);
+		interenetThings.set(firstLocation,interenetThings.get(secondLocation));
+		
 	}
 	
 }

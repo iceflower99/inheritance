@@ -47,4 +47,9 @@ public class Fiction extends Books implements FoundOnTheInternet
 		}
 	}
 	
+	public double internetLevels()
+	{
+	return internetLevels();
+	}
+	
 }

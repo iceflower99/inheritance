@@ -1,14 +1,17 @@
 package view;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
+
 import ctect.controller.CtecController;
 
-public class InhertitancePanel extends Jpanel
+public class InhertitancePanel extends JPanel
 {
 	private CtecController baseController;
 	private JButton sortButton;
 	private JTextArea textArea;
-	
 	
 	private void setupListeners()
 	{
@@ -16,10 +19,12 @@ public class InhertitancePanel extends Jpanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				baseController.insert
+				baseController.insertionSort();
+				
+				textArea.setText(baseController.showSillyLevels());
 			}
 			
-		})	
+		});	
 	}
 	
 
